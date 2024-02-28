@@ -64,6 +64,8 @@ if (isset($_POST["verify"])) {
 
     if ($userCode == $_SESSION["verification_code"]) {
         unset($_SESSION["verification_code"]);
+        $_SESSION["user_logged_in"] = true;
+        $_SESSION["user_id"] = $_SESSION["temp_user_id"];
         header("Location: index.php");
         exit();
     } else {
@@ -76,7 +78,5 @@ if (isset($_POST["verify"])) {
 <?php if (!empty($message)) {
     echo $message;
 } ?>
-
-<!-- Aqui começa o HTML do seu login.php, inclua este PHP no topo do seu arquivo HTML -->
 
 

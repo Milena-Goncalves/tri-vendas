@@ -32,24 +32,23 @@
 
 		</head>
 		<body>
-    <header id="header" id="home">
+		<header id="header" id="home">
 			    <div class="container">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
-				        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+				        <a href="../../index.php" lass="navbar-brand" class="d-flex">
+							<img src="https://imgmilena.s3.eu-north-1.amazonaws.com/logo.png" class="d-flex" style="height: 4rem" />
+	<h4 class="d-flex align-items-center" style="
+    color: white;
+    font-size: 2rem;
+	padding-left: 2rem"> TriVendas</h4>
+	</a>
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="../../pages/index.php">Home</a></li>
-				          <li><a href="about-us.php">About Us</a></li>
-				          <li><a href="category.php">Category</a></li>
+				          <li class="menu-active"><a href="../../pages/index.php">Inicio</a></li>
+				          <li><a href="about-us.php">Sobre nós</a></li>
 				          <li><a href="contact.php">Contact</a></li>
-				          <li class="menu-has-children"><a href="">Pages</a>
-				            <ul>
-								<li><a href="elements.html">elements</a></li>
-								<li><a href="search.html">search</a></li>
-								<li><a href="single.html">single</a></li>
-				            </ul>
 				          </li>
 				      </nav>		    		
 			    	</div>

@@ -2,31 +2,32 @@
 <?php include "../models/account.php"; ?>
 
 <div class="vh-100 gradient-custom">
-<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
-    <div class="card p-4">
-        <div class="image d-flex flex-column justify-content-center align-items-center">
-            <button class="btn btn-secondary">
-                <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
-            </button> 
-            <span class="name mt-3"><?= htmlspecialchars(
+<div class="container mb-4 p-3 d-flex justify-content-center">
+    <div style="
+    padding-top: 9rem;
+    color: #ffffff;
+    font-size: 18px;">
+        <div class="image d-flex flex-column justify-content-center align-items-center border border-white p-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" fill="#ffffff" class="bi bi-person-circle" viewBox="0 0 16 16 " style="
+    margin: 15px;">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+            <span class="name mt-4"><?= htmlspecialchars(
                 $userInfo["username"] ?? "Anonymous"
             ) ?></span> 
-            <span class="idd"><?= htmlspecialchars(
+            <span class="idd mt-4"><?= htmlspecialchars(
                 $userInfo["email"] ?? "No Email"
-            ) ?></span>
-            <div class="d-flex flex-row justify-content-center align-items-center gap-2">
-                <span class="idd1">User ID: <?= htmlspecialchars(
-                    $userId ?? "Unknown"
-                ) ?></span> 
-            </div> 
-            <div class=" d-flex mt-2">
-                <a href="create_ad.php" class="btn1 btn-dark">Create Ad</a>
+            ) ?></span> 
+            <div class=" d-flex mt-4">
+            <a href="create_ad.php" class="btn btn-light align-items-right">Criar anuncio</a>
             </div>
+                
             <div class="text mt-3">
-                <span>Your bio goes here. Edit your profile to update this information.</span>
+                <span></span>
             </div>
-            <div class=" px-2 rounded mt-4 date ">
-                <span class="join">Joined <?= date(
+            <div class=" px-2 rounded mt-3 date ">
+                <span class="join">Desde: <?= date(
                     "F, Y",
                     strtotime($userInfo["register_date"] ?? "now")
                 ) ?></span>
@@ -60,12 +61,15 @@
                                     ) ?></h4></a>                   
                                 </div>
                             </div>
-                            <div class="delete-button">
+                            <div class="delete-button" style="
+    display: grid;
+    margin-block: -2rem;
+    margin-left: 25rem;">
                             <form action="delete_ad.php" method="POST">
                                 <input type="hidden" name="ad_id" value="<?= htmlspecialchars(
                                     $ad["ad_id"]
                                 ) ?>">
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-outline-secondary">Delete</button>
                             </form>
                             </div>
                             <p>
@@ -74,17 +78,17 @@
                             <h5>Price: <?= htmlspecialchars(
                                 $ad["price"]
                             ) ?></h5>
-                            <p class="address"><span class="lnr lnr-map"></span> Category: <?= htmlspecialchars(
+                            <p class="address"><span class="lnr lnr-map"></span> Categoria: <?= htmlspecialchars(
                                 $ad["category_name"]
                             ) ?></p>
-                            <p class="address"><span class="lnr lnr-database"></span> Post Date: <?= $ad[
+                            <p class="address"><span class="lnr lnr-database"></span> Data Postada: <?= $ad[
                                 "post_date"
                             ] ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>
-                <p>No ads found. <a href="create_ad.php">Create your first ad!</a></p>
+                <p>Não há anuncios. <a href="create_ad.php">Crie seu primeiro anuncio!</a></p>
             <?php endif; ?>
         </div>
     </div>

@@ -1,6 +1,5 @@
 <?php require "../models/create_ads.php"; ?>
 <?php require "../pages/compar/header.php"; ?>
-
 <div class="vh-100 gradient-custom">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100" style="margin: 15% 0 15% 0;">

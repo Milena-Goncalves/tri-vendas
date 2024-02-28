@@ -16,12 +16,12 @@
                     <form action="search.php" method="GET">
                         <div class="row justify-content-center form-wrap">
                             <div class="col-lg-4 form-cols">                   
-                                <input type="text" class="form-control" name="search" placeholder="What are you looking for?">
+                                <input type="text" class="form-control" name="search" placeholder="O que você procura?">
                             </div>
                             <div class="col-lg-3 form-cols">
                                 <div class="default-select" id="default-selects2">
                                     <select name="category">
-                                        <option value="">All Category</option>
+                                        <option value="">Categorias</option>
                                         <?php foreach (
                                             $categories
                                             as $category
@@ -36,13 +36,12 @@
                             </div>                                      
                         </div>
                         <div class="col-lg-2 form-cols">
-                            <button type="submit" class="btn btn-info">
-                              <span class="lnr lnr-magnifier"></span> Search
+                            <button type="submit" class="btn btn-info" style="margin-top: 0;" >
+                              <span class="lnr lnr-magnifier"></span> Procurar
                             </button>
                         </div>                              
                     </div>
                 </form> 
-                <p class="text-white"> <span>Search by tags:</span> Technology, Business, Consulting, IT Company, Design, Development</p>
             </div>                                          
         </div>
     </div>
@@ -88,7 +87,7 @@
                                     </div>
                                     <ul class="btns" style="padding-left: 200px;">
                                         <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
-                                        <li><a href="detalhes.php?ad_id=' .
+                                        <li style="margin-top: 0.5rem;"><a href="detalhes.php?ad_id=' .
                         $ad["ad_id"] .
                         '">Ver anúncio</a></li>
                                     </ul>
